@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IT Support Ticket System</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js' defer></script>
+</head>
+
+<body>
+    <h1>Service Request Form </h1>
+
+    <div class="mainContainer">
+
+        <div class="formContainer">
+
+            <form action="/submit" onsubmit="return validateForm()" method="post" required>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" required></input>
+                <span id="firstNameError" class="errorMessage"></span>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" name="lastName" id="lastName" required></input><br><br>
+                <span id="lastNameError" class="errorMessage"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required></input><br>
+                <span id="emailError" class="errorMessage"></span>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" required></input><br>
+                <span id="phoneNumberError" class="errorMessage"></span>
+
+                <fieldset class="issuesFieldset">
+                    <legend>I'm having a problem with:</legend>
+
+
+                    <select id="issue" name="issue" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="password" id="pwReset">Password reset</option>
+                        <option value="printer" id="printerIssue">Printer Issue</option>
+                        <option value="file" id="fileIssue">Can't find my file</option>
+                        <option value="software" id="softwareIssue">Software Issue</option>
+                        <option value="hardware" id="hardwareIssue">Hardware Issue</option>
+                        <option value="performance" id="performanceIssue">Performance Issue</option>
+                        <option value="internet" id="internetIssue">Internet Connectivity Issue</option>
+                        <option value="access" id="accessIssue">Permission or access request</option>
+                        <option value="email" id="emailIssue">Email issue</option>
+                        <option value="other" id="otherIssue">Other</option>
+                    </select>
+                    <span class="errorMessage" id="issueError"></span>
+                </fieldset>
+
+                <label for="description">Describe your problem:</label>
+                <textarea id="description" name="description" rows="15" cols="60" required></textarea><br><br>
+
+                <fieldset class="urgencyFieldset">
+                    <legend>Urgency level:</legend>
+                    <div class="radioGroup">
+                        <input type="radio" id="high" name="urgency" value="high" required>
+                        <label for="high">High</label>
+                    </div>
+                    <div class="radioGroup">
+                        <input type="radio" id="medium" name="urgency" value="medium">
+                        <label for="medium">Medium</label>
+                    </div>
+                    <div class="radioGroup">
+                        <input type="radio" id="low" name="urgency" value="low">
+                        <label for="low">Low</label>
+                    </div>
+                    <span class="errorMessage" id="urgencyError"></span>
+                </fieldset>
+
+                <fieldset class="contactFieldset">
+                    <legend>How would you like to be contacted?</legend>
+                    <div class="radioGroup">
+                        <input type="radio" id="contactBoth" name="contact" value="contactBoth" required>
+                        <label for="contactBoth">Either phone or e-mail</label>
+                    </div>
+                    <div class="radioGroup">
+                        <input type="radio" id="contactPhone" name="contact" value="contactPhone">
+                        <label for="contactPhone">By phone</label>
+                    </div>
+                    <div class="radioGroup">
+                        <input type="radio" id="contactEmail" name="contact" value="contactEmail">
+                        <label for="contactEmail">By email</label>
+                    </div>
+                    <span class="errorMessage" id="contactError"></span>
+                </fieldset>
+
+                <button type="submit" id="formSubmitButton">Submit</button>
+        </div>
+
+       
+
+        <div class="searchContainer">
+            <h2 class="searchHeading">Search for open support requests</h2>
+            <label for="ticketSearch">By support ticket number:</label>
+            <input type="search" name="q" id="ticketSearch" max="10" min="10" placeholder="10 characters long">
+            <button type="button" class="searchSubmitButton">Search</button>
+
+            <p>or</p>
+
+            <label for="nameSearch">By first and last name:</label>
+            <input type="search" name="q" id="nameSearch" min="3">
+
+            <button type="button" class="searchSubmitButton">Search</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div id="summaryContainer"></div>
+    <button onclick="printSummary">Print Summary</button>
+    
+
+
+</body>
+
+</html>
