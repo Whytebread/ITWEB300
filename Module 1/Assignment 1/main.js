@@ -31,7 +31,7 @@ function validateForm () {
 
     let isValid = true;
 
-    // checks if first name is empty and if only characters are submittted
+    // checks if first name is empty and if only characters are submitted
     if (firstName.value == "") {
         document.getElementById("firstNameError").innerText = "Please enter your first name";
         isValid = false;
@@ -40,7 +40,7 @@ function validateForm () {
         isValid = false;
     }
 
-    // checks if last name is empty and if only characters are submittted
+    // checks if last name is empty and if only characters are submitted
     if (lastName.value == "") {
         document.getElementById("lastNameError").innerText = "Please enter your last name";
         isValid = false;
@@ -145,7 +145,7 @@ function createSupportTicket (firstName, lastName, email, phoneNumber, issue, de
 //     });
 //     }
 
-// function that displays each property from within the array
+// function that displays each property from within the array and populates the data into a div
 function displayTicketSummary() {
     summaryContainer.innerHTML= "";
 

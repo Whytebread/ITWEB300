@@ -123,7 +123,30 @@ class supportTicket {
     
 
 
-// function to search server for prior request by name or ticket number
+// functions to search server for prior request by name or ticket number that will then return the search result
+//     function searchByTicket() {
+//         ticketSearch.value
+//         fetch(url)
+//     .then(response => {
+//         // handle the response
+//     })
+//     .catch(error => {
+//         // handle the error
+//     });
+
+//     }
+
+//     function searchByName() {
+//         nameSearch.value
+
+//         fetch(url)
+//     .then(response => {
+       
+//     })
+//     .catch(error => {
+//         // handle the error
+//     });
+//     }
 
 
 // function that displays each property from within the array

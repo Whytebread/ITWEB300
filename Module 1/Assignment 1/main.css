@@ -14,6 +14,12 @@ label {
     font-weight: bold;
 }
 
+/* Inputs */
+
+input#firstName, input#lastName, input#email, input#phoneNumber, input#ticketSearch, input#nameSearch {
+    padding: 5px;
+}
+
 /* Form containers */
 
 .mainContainer {
@@ -82,17 +88,26 @@ textarea {
 
 .searchContainer {
 max-width: 500px;
+margin-left: 100px;
 }
 
 /* Buttons */
 
-searchSubmitButton {
+.searchSubmitButton {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#formSubmitButton {
     padding: 10px;
 }
 
-formSubmitButton {
+.printSummaryButton {
     padding: 10px;
+    margin-top: 40px;
 }
+
+
 
 /* Input/Focus */
 
