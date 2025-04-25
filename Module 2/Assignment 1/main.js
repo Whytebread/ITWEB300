@@ -38,7 +38,7 @@ function validateInputForm(form) {
     return alert("Form submission successful!"); //alerts if all input validation checks are valid
 }
 
-// even listener that first prevents default of submitting the form before validation checks and then executes the validateInputForm function passing in the form inputs
+// event listener that first prevents default of submitting the form before validation checks and then executes the validateInputForm function passing in the form inputs
 document.getElementById("submitButton").addEventListener("click", function(event) {
     event.preventDefault();
     validateInputForm(inputForm);
