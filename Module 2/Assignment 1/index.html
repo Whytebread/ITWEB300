@@ -6,24 +6,24 @@
     <title>Module 2 - Assignment 1</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='main.js' defer></script>
 </head>
 <body>
     <form id="inputForm">
         <label for="date">Request Date:</label>
-        <input type="date" name="requestDate" id="requestDate"></input><br><br>
+        <input type="text" name="requestDate" id="requestDate" required placeholder="mm/dd/yyyy"></input><br><br>
 
         <label for="employee id">Employee ID:</label>
-        <input type="text" name="employeeID" id="employeeID"></input><br><br>
+        <input type="text" name="employeeID" id="employeeID" required></input><br><br>
 
         <label for="first name">First Name:</label>
-        <input type="text" name="firstName" id="firstName"></input><br><br>
+        <input type="text" name="firstName" id="firstName" required></input><br><br>
 
         <label for="last name">Last Name:</label>
-        <input type="text" name="lastName" id="lastName"></input><br><br>
+        <input type="text" name="lastName" id="lastName" required></input><br><br>
 
         <label for="description">Problem Description:</label><br>
-        <textarea name="problemDescription" id="problemDescription" rows="15" cols="50"></textarea><br><br>
+        <textarea name="problemDescription" id="problemDescription" rows="15" cols="50" required></textarea><br><br>
 
     </form>
 

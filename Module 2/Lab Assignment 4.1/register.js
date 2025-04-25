@@ -15,40 +15,48 @@ function checkForm() {
    // TODO: Perform input validation 
    if (fullName.value < 1) {
       formError.innerText = "Missing full name."
+      formError.classList.remove("hide");
       return false;
    }
 
    if (email.value === "") {
-      formError.innterText = "Invalid or missing email address."
+      formError.innterHTML = "<li>Invalid or missing email address.</li>"
+      formError.classList.remove("hide");
    } else if 
    (emailRegex.test(email.value))
       if (emailRegex.test(email.value) == false) {
-         formError.innerText = "Invalid or missing email address."
+         formError.innerHTML = "<li>Invalid or missing email address.</li>"
+         formError.classList.remove("hide");
          return false;
       }
 
    if (password.value < 10 || password.value > 20) {
-      formError.innerText = "Password must be between 10 and 20 characters."
+      formError.innerHTML = "<li>Password must be between 10 and 20 characters.</li>"
+      formError.classList.remove("hide");
       return false;
    } else if 
      (!lowerRegex.text(password.value)) {
-      formError.innerText= "Password must contain at least one lowercase character."
+      formError.innerHTML= "<li>Password must contain at least one lowercase character.</li>"
+      formError.classList.remove("hide");
       return false;
      } else if 
      (!upperRegex.text(password.value)) {
-      formError.innerText= "Password must contain at least one uppercase character."
+      formError.innerHTML= "<li>Password must contain at least one uppercase character.</li>"
+      formError.classList.remove("hide");
       return false;
      } else if
      (!digitRegex.text(password.value)) {
-      formError.innerText= "Password must contain at least one digit."
+      formError.innerHTML= "<li>Password must contain at least one digit.</li>"
+      formError.classList.remove("hide");
       return false;
      }
 
-
    if (password.value ===! passwordConfirm.value) {
-      formError.innerText = "Password and confirmation password don't match."
+      formError.innerHTML = "<li>Password and confirmation password don't match.</li>"
+      formError.classList.remove("hide");
       return false;
    }
+
 }
 
 document.getElementById("submit").addEventListener("click", function(event) {
