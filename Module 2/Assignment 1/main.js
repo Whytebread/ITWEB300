@@ -4,11 +4,11 @@ const employeeID = document.getElementById("employeeID");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const problemDescription = document.getElementById("problemDescription");
-const inputForm = document.getElementById("inputForm")
+const inputForm = document.getElementById("inputForm");
 const submitButton = document.getElementById("submitButton");
 
 // Regex
-dateRegex = /\d{1,2}\/\d{1,2}\/\d{2,4}/
+dateRegex = /\d{1,2}\/\d{1,2}\/\d{2,4}/;
 employeeRegex = /^[A-Z][A-Za-z0-9]{5}[0-9]{5}$/;
 nameRegex = /^[A-Z]/;
 
