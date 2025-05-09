@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Module 2 - Assignment 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src='main.js' defer></script>
+</head>
+<body>
+    <form id="inputForm">
+        <label for="date">Request Date:</label>
+        <input type="text" name="requestDate" id="requestDate" required placeholder="mm/dd/yyyy"></input><br><br>
+
+        <label for="employee id">Employee ID:</label>
+        <input type="text" name="employeeID" id="employeeID" required></input><br><br>
+
+        <label for="first name">First Name:</label>
+        <input type="text" name="firstName" id="firstName" required></input><br><br>
+
+        <label for="last name">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required></input><br><br>
+
+        <label for="description">Problem Description:</label><br>
+        <textarea name="problemDescription" id="problemDescription" rows="15" cols="50" required></textarea><br><br>
+
+    </form>
+
+    <button type="submit" id="submitButton">Submit</button>
+
+    <p id="timeDisplay"></p>
+
+</body>
+</html>
