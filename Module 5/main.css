@@ -1,0 +1,130 @@
+/* Heading */
+
+h1 {
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+/* Labels */
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+
+input#firstName, input#lastName, input#email, input#phoneNumber, input#ticketSearch, input#nameSearch {
+    padding: 5px;
+}
+
+/* Form containers */
+
+.mainContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.formContainer {
+    flex: 2;
+    max-width: 500px;
+}
+
+
+/* Fieldsets*/
+
+.issuesFieldset {
+    max-width: 250px; 
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+legend {
+    font-size: large;   
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.issuesFieldset label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+.urgencyFieldset, .contactFieldset {
+    margin-bottom: 10px;
+    max-width: 500px;
+}
+
+/* Radio Buttons */
+
+input[type="radio"] {
+    vertical-align: middle;
+    position: relative;
+    top: 5px;
+}
+
+
+.radioGroup {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+/* Text area */
+
+textarea {
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Search */
+
+.searchContainer {
+max-width: 500px;
+margin-left: 100px;
+}
+
+/* Buttons */
+
+.searchSubmitButton {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#formSubmitButton {
+    padding: 10px;
+}
+
+.printSummaryButton {
+    padding: 10px;
+    margin-top: 40px;
+}
+
+/* Input/Focus */
+
+input:valid {
+    border: 2px solid black;
+}
+
+input:required:after {
+    content:" *";
+    color: red;
+}
+
+/* Error Messages */
+.error-message {
+    color: red;
+    display: none;
+    font-size: 0.8rem;
+}
+
+.error-message.active {
+    display: block;
+}
